@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kari Kari — Aventura Boliviana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Nunito:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="flag">
+      <span class="bar red"></span>
+      <span class="bar yellow"></span>
+      <span class="bar green"></span>
+    </div>
+    <div class="brand">
+      <h1>Kari Kari</h1>
+      <p>Una aventura inspirada en Bolivia</p>
+    </div>
+    <nav class="main-nav">
+      <button id="btn-gallery">Galería</button>
+      <button id="btn-trailer">Ver Trailer</button>
+      <a class="cta" href="#download">Descargar demo</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Explora, investiga y derrota al mito del Kari Kari</h2>
+        <p>Recorre paisajes altiplánicos, mercados y aldeas. Resuelve acertijos basados en leyendas bolivianas.</p>
+        <div class="hero-actions">
+          <button id="play-trailer-hero">Reproducir trailer</button>
+          <a href="#gallery" class="ghost">Ver imágenes</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="mock-phone">
+          <img src="images/kari1.jpg" alt="Kari Kari escena 1">
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+      <h3>Galería</h3>
+      <div class="images-grid">
+        <img src="images/kari1.jpg" data-index="0" alt="Kari Kari 1">
+        <img src="images/kari2.jpg" data-index="1" alt="Kari Kari 2">
+        <img src="images/kari3.jpg" data-index="2" alt="Kari Kari 3">
+        <img src="images/kari4.jpg" data-index="3" alt="Kari Kari 4">
+        <img src="images/kari5.jpg" data-index="4" alt="Kari Kari 5">
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <h4>Ambientación boliviana</h4>
+        <p>Música y atmósferas inspiradas en ritmos andinos y del oriente.</p>
+      </div>
+      <div class="feature">
+        <h4>Mitos y leyendas</h4>
+        <p>Puzzles basados en historias locales transmitidas por la comunidad.</p>
+      </div>
+      <div class="feature">
+        <h4>Exploración</h4>
+        <p>Mapas variados: puna, valles, mercados y lagunas.</p>
+      </div>
+    </section>
+
+    <section id="download" class="download">
+      <h3>Demo disponible</h3>
+      <p>Descarga la demo y comienza la búsqueda del Kari Kari.</p>
+      <a class="cta" href="kari_kari_demo.zip">Descargar demo (ZIP)</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-left">
+      <p>© <span id="year"></span> Kari Kari Studio</p>
+    </div>
+    <div class="footer-right">
+      <p>Hecho en Bolivia</p>
+    </div>
+  </footer>
+
+  <div id="modal-gallery" class="modal hidden">
+    <button class="modal-close" id="close-gallery">×</button>
+    <div class="modal-content">
+      <button class="nav prev" id="prev-img">‹</button>
+      <img id="modal-image" src="images/kari1.jpg" alt="imagen ampliada">
+      <button class="nav next" id="next-img">›</button>
+    </div>
+  </div>
+
+  <div id="modal-trailer" class="modal hidden">
+    <button class="modal-close" id="close-trailer">×</button>
+    <div class="modal-content video-content">
+      <video id="trailer-player" controls preload="metadata">
+        <source src="trailer.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
